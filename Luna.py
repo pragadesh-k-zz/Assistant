@@ -9,7 +9,7 @@ cur_sheet = None
 wb = None
 init()
 
-def workbook(file = "friend.xlsx"):
+def workbook(file = "data.xlsx"):
     
     global cur_sheet,wb
     wb = xl.load_workbook(file)
@@ -163,8 +163,6 @@ def arithmetic(expression):  # call with joined string
 
             listed_expression.append(exp_element)
 
-           # print(listed_expression)
-
             operator = listed_expression[1].upper()
 
             operand_one = int(listed_expression[0])
@@ -290,7 +288,7 @@ def database(user_question):
 
                 cur_sheet.cell(cur_sheet.max_row,2).value = answer.upper()    
 
-                wb.save("friend.xlsx")
+                wb.save("data.xlsx")
             else:
                 pass
         else:
@@ -449,50 +447,3 @@ def conversation():
             	database(message)
 
 conversation()
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
